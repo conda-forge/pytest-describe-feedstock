@@ -16,21 +16,22 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
-    - pytest >=2.6.0
+    - python >=3.6
+    - pytest >=4.0.0
 
 test:
   requires:
     - pytest-cov
-    - pytest >=2.6.0,<4.5
+    - pip
   source_files:
     - test
   imports:
     - pytest_describe
   commands:
+    - python -m pip check
     - pytest --cov pytest_describe
 
 about:
