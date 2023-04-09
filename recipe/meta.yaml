@@ -1,12 +1,11 @@
-{% set name = "pytest-describe" %}
 {% set version = "2.0.2" %}
 
 package:
-  name: {{ name }}
+  name: pytest-describe
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/p/pytest-describe/pytest-describe-{{ version }}.tar.gz
   sha256: 7242809e81b3596623209a955945f36969133ad301e5f50275994ceb9a104736
 
 build:
@@ -20,7 +19,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pytest >=4.0.0
+    - pytest >=4.0.0,<7.1
 
 test:
   requires:
@@ -31,8 +30,8 @@ test:
   imports:
     - pytest_describe
   commands:
-    - python -m pip check
-    - pytest --cov pytest_describe
+    - pip check
+    - pytest -vv --cov=pytest_describe --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=100
 
 about:
   home: https://github.com/ropez/pytest-describe
