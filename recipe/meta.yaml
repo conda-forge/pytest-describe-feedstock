@@ -15,11 +15,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - pytest >=4.0.0,<7.1
+    - python >=3.7
+    - pytest >=4.0.0,<8
 
 test:
   requires:
