@@ -31,7 +31,7 @@ test:
     - pytest_describe
   commands:
     - pip check
-    - pytest -vv --cov=pytest_describe --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=63
+    - pytest -vv --cov=pytest_describe --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=71
 
 about:
   home: https://github.com/ropez/pytest-describe
