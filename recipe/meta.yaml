@@ -11,27 +11,29 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
     - pip
-  run:
     - python >=3.7
-    - pytest >=4.0.0,<8
+  run:
+    - pytest >=4.6,<9
+    - python >=3.7
 
 test:
   requires:
-    - pytest-cov
+    - coverage
     - pip
+    - pytest
   source_files:
     - test
   imports:
     - pytest_describe
   commands:
     - pip check
-    - pytest -vv --cov=pytest_describe --cov-branch --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=71
+    - coverage run --source=pytest_describe --branch -m pytest -vv --color=yes --tb=long
+    - coverage report --show-missing --skip-covered --fail-under=71
 
 about:
   home: https://github.com/ropez/pytest-describe
