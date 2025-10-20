@@ -12,7 +12,6 @@ Summary: Describe-style plugin for py.test
 pytest-describe is a plugin for pytest that allows tests to be written in arbitrary
 nested describe-blocks, similar to RSpec (Ruby) and Jasmine (JavaScript).
 
-
 Current build status
 ====================
 
