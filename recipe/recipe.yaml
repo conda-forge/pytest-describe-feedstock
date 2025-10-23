@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.2.1"
+  version: "3.0.0"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pytest-describe/pytest_describe-${{ version }}.tar.gz
-  sha256: eb59307333508d700082a4a8aadba0f874f02c73602f7113071b0b41bfe183b7
+  sha256: 50e0b7f404decaeb1b5d7bca13cbe369208d1eeffafc2802663777b195f074ff
 
 build:
   number: 0
