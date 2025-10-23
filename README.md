@@ -3,7 +3,7 @@ About pytest-describe-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-describe-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ropez/pytest-describe
+Home: https://github.com/pytest-dev/pytest-describe
 
 Package license: MIT
 
