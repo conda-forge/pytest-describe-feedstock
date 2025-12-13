@@ -25,7 +25,7 @@ requirements:
     - python ${{ python_min }}.*
     - uv-build >=0.9.4,<0.10.0
   run:
-    - pytest >=6,<9
+    - pytest >=6,<10
     - python >=${{ python_min }}
 
 tests:
